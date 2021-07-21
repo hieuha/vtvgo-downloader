@@ -13,7 +13,6 @@ def my_request(url):
   pattern_search = re.search(pattern, html)
   pattern_search = pattern_search.groups()
   url_m38u = pattern_search[0].strip().replace("\"", "")
-  title = ""
   file_mp4_re = re.search("https://(.+?)/(.+?)/(.+?)/(.+?)/(.+?)/(.+?)/index.m3u8", url_m38u)
   file_name = file_mp4_re.groups()[5]
   return file_name, url_m38u
